@@ -1,6 +1,6 @@
 @charaset "utf-8";
 * {
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 	margin: 0;
 	padding: 0;
 }
@@ -21,13 +21,36 @@ a:hover {
 	color: gray;
 }
 
+.container {
+	height: 500px;
+}
+.title-section {
+	width: 200px;
+	height: 100px;
+	text-align: center;
+	margin: 0 auto;
+}
+.title-border {
+	width: 100px;
+	border-bottom: 1px solid black
+}
+#home, #about, #program, #topics, #product, #dialogue, #column, #profile {
+	margin-top: -100px;
+	padding-top: 100px;
+}
 /* header */
 header {
 	height: 100px;
 	width: 100%;
 	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
 	background-color: white;
-	z-index: 1px;
+	z-index: 10;
+  /*line-height: 50px;*/
+	border-bottom: 1px solid #eee;
+
 }
 .logo {
 	float: left;
@@ -49,6 +72,7 @@ header {
 }
 /* header-end */
 
+
 /* top-content */
 .top-content {
 	margin-top: 100px;
@@ -58,12 +82,4 @@ header {
 }
 .page-button {
 	height: 100px;
-}
-.title-container {
-	width: 200px;
-	height: 100px;
-	text-align: center;
-}
-.title-border {
-	border-bottom: 1px solid black
 }
