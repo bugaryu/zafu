@@ -1,6 +1,9 @@
 @charaset "utf-8";
-* {
+
+div, header, footer {
 	/*border: 1px solid blue;*/
+}
+* {
 	margin: 0;
 	padding: 0;
 }
@@ -25,19 +28,23 @@ a:hover {
 	height: 500px;
 }
 .title-section {
-	width: 200px;
-	height: 100px;
 	text-align: center;
 	margin: 0 auto;
+	padding-top: 100px;
 }
 .title-border {
-	width: 100px;
-	border-bottom: 1px solid black
+	width: 50px;
+	border-bottom: 2px solid lightgray;
+	margin: 20px auto 50px auto;
 }
 #home, #about, #program, #topics, #product, #dialogue, #column, #profile {
 	margin-top: -100px;
 	padding-top: 100px;
 }
+.content-text {
+	text-align: center;
+}
+
 /* header */
 header {
 	height: 100px;
@@ -50,7 +57,6 @@ header {
 	z-index: 10;
   /*line-height: 50px;*/
 	border-bottom: 1px solid #eee;
-
 }
 .logo {
 	float: left;
@@ -70,7 +76,7 @@ header {
 	float: left;
 	margin: 35px 10px;
 }
-/* header-end */
+/* <-- header */
 
 
 /* top-content */
@@ -83,3 +89,31 @@ header {
 .page-button {
 	height: 100px;
 }
+/* <-- top-content */
+
+/* product */
+/* <-- product */
+#dialogue, #column {
+	float: left;
+	width: 49%;
+	border-left: 1px solid black
+}
+/* profile */
+#profile {
+	height: 500px;
+	padding-bottom: 50px;
+	clear: left;
+}
+/* <-- profile */
+
+/* footer */
+footer {
+	height: 100px;
+	background-color: lightgray;
+}
+.copyright {
+	float: right;
+	margin-top: 35px;
+	margin-right: 100px;
+}
+/* <-- footer */
