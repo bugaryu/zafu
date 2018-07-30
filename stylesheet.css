@@ -1,7 +1,8 @@
 @charaset "utf-8";
 
-div, header, footer {
-	/*border: 1px solid blue;*/
+/* 共通のcss */
+div, header, footer, li, ul, img {
+	border: 1px solid blue;
 }
 * {
 	margin: 0;
@@ -9,10 +10,6 @@ div, header, footer {
 }
 html, body {
 	border: none;
-}
-
-li {
-	list-style-type: none;
 }
 a {
 	color: black;
@@ -45,6 +42,13 @@ a:hover {
 	text-align: center;
 }
 
+.main {
+	width: 100%;
+	position: absolute;
+	top: 100px;
+}
+/* <-- 共通のcss */
+
 /* header */
 header {
 	height: 100px;
@@ -68,6 +72,7 @@ header {
 	margin-right: 50px;
 }
 .menu li {
+	list-style-type: none;
 	border: none;
 	font-size: 16px;
 	display: inline;
@@ -78,21 +83,69 @@ header {
 }
 /* <-- header */
 
-
 /* top-content */
 .top-content {
-	margin-top: 100px;
+	height: 900px;
+	border-color: red;
 }
-.pagenate-images {
-	width: 100%;
+#pagenate {
+	width: 900px;
+	height: 700px;
+	/*overflow: hidden;*/
+	text-align: center;
+	margin: 0 auto;
 }
-.page-button {
-	height: 100px;
+.slide-image {
+	width: 900px;
+	height: 600px;
+	/*overflow: hidden;*/
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.slide-image img {
+	width: 800px;
+}
+
+.slide-enter-active, .slide-leave-active {
+	transition: all 1.5s 0s;
+}
+.slide-enter {
+	opacity: 0;
+	transform: translateX(-100px);
+	/*transform: translateX(-100px) scale(1.2);*/
+}
+
+.slide-leave-to {
+	opacity: 0;
+	transform: translateX(100px);
+	/*transform: translateX(100px) scale(0.8);	*/
+}
+.slide-leave-active {
+	position: absolute;
+}
+.slide-btn {
+	width: 30px;
+	height: 30px;
+	margin-left: 10px;
+	border-radius: 15px;
+	border-style: none;
+	display: inline-block;
 }
 /* <-- top-content */
 
+/* about */
+
+/*#about {
+	clear: left;
+}*/
+
+/* <-- about */
+
 /* product */
+
 /* <-- product */
+
 #dialogue, #column {
 	float: left;
 	width: 49%;
