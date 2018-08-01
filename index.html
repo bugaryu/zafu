@@ -4,8 +4,6 @@
 	<meta charset="utf-8">
 	<title>zafu</title>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
 </head>
 <body>
 	<header>
@@ -26,20 +24,20 @@
 		<div id="home" class="top-content">
 			<div id="pagenate">
 				<transition name="slide">
-					<div class="slide-image" v-if="id == 0" key="0">
-						<img src="./zafu_photos/top-no1.png">
-					</div>
-					<div class="slide-image" v-if="id == 1" key="1">
-						<img src="./zafu_photos/top-no2&product.png">
-					</div>
-					<div class="slide-image" v-if="id == 2" key="2">
-						<img src="./zafu_photos/top-no3.png">
+					<div class="slide-image" 
+						 v-for="(url, page) in images" 
+						 v-if="current == page" 
+						 :key="page">
+						<img :src="url">
 					</div>
 				</transition>
 				<div id="pagenate-btn">
-					<button class="slide-btn" value="0" v-bind:style="setStyle(0)" v-on:click="change($event)"></button>
-					<button class="slide-btn" value="1" v-bind:style="setStyle(1)" v-on:click="change($event)"></button>
-					<button class="slide-btn" value="2" v-bind:style="setStyle(2)" v-on:click="change($event)"></button>
+					<button class="slide-btn" 
+							:class="{ 'page-active': current == page }" 
+							v-for="(url, page) in images" 
+							:value="page" 
+							@click="change">
+					</button>
 				</div>
 			</div>
 		</div>
@@ -125,6 +123,7 @@
 			</div>
 		</footer>
 	</div>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 	<script type="text/javascript" src="vue.js"></script>
 </body>
 </html>

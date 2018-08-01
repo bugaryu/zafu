@@ -2,7 +2,7 @@
 
 /* 共通のcss */
 div, header, footer, li, ul, img {
-	border: 1px solid blue;
+	/*border: 1px solid blue;*/
 }
 * {
 	margin: 0;
@@ -86,14 +86,15 @@ header {
 /* top-content */
 .top-content {
 	height: 900px;
-	border-color: red;
+	/*background-color: red;*/
 }
 #pagenate {
 	width: 900px;
 	height: 700px;
 	/*overflow: hidden;*/
 	text-align: center;
-	margin: 0 auto;
+	margin: 30px auto 0 auto;
+	/*background-color: green;*/
 }
 .slide-image {
 	width: 900px;
@@ -101,7 +102,7 @@ header {
 	/*overflow: hidden;*/
 	text-align: center;
 	margin: 0 auto;
-	margin-top: 30px;
+	/*background-color: orange;*/
 }
 .slide-image img {
 	width: 800px;
@@ -130,7 +131,13 @@ header {
 	margin-left: 10px;
 	border-radius: 15px;
 	border-style: none;
+	background-color: #B5B4B5;
 	display: inline-block;
+	outline: none;
+	cursor: pointer;
+}
+.page-active {
+	background-color: #C65248;
 }
 /* <-- top-content */
 
