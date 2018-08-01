@@ -8,7 +8,7 @@
 <body>
 	<header>
 		<div class="logo">
-			<img src="./zafu_photos/zafu-logo.png">
+			<img src="./images/zafu_logo.png">
 		</div>
 		<ul class="menu">
 			<li><a href="#about">ABOUT ZAF</a></li>
@@ -20,95 +20,110 @@
 			<li><a href="#profile">PROFILE</a></li>
 		</ul>
 	</header>
-	<div id="home" class="top-content">
-		<div class="pagenation">
-			<img class="pagenate-images" src="./zafu_photos/top-no1.png">
-			<div class="page-button">
-				
+	<div class="main">
+		<div id="home" class="top-content">
+			<div id="pagenate">
+				<transition name="slide">
+					<div class="slide-image" 
+						 v-for="(url, page) in images" 
+						 v-if="current == page" 
+						 :key="page">
+						<img :src="url">
+					</div>
+				</transition>
+				<div id="pagenate-btn">
+					<button class="slide-btn" 
+							:class="{ 'page-active': current == page }" 
+							v-for="(url, page) in images" 
+							:value="page" 
+							@click="change">
+					</button>
+				</div>
 			</div>
 		</div>
+		<div id="about" class="container">
+			<div class="title-section">
+				<h1>ABOUT US</h1>
+				<p>zafu について</p>
+				<div class="title-border"></div>
+			</div>
+			<div class="content-text">
+				zafuとは、ミッション「禅やマインドフルネスに学んだメソッドやプロダクトにより、<br>
+				ひとりひとりの幸せ・健康で有意義な人生・良好なコミュニティ構築に寄与する。結果として本質的な安楽を伴った<br>
+				社会に必要有用な人材を育成し、善き個の連結による永遠なる世界平和への道筋を導いていくこと」に沿った<br>
+				「身心堂」「zafu ざふ」「安楽坐禅法」等各事業の総称です。
+			</div>
+		</div>
+		<div id="program" class="container">
+			<div class="title-section">
+				<h1>PROGRAM</h1>
+				<p>禅ボディマインドマネジメント講座</p>
+				<div class="title-border"></div>
+			</div>
+			<div class="content-text">
+				からだ・こころ諸症状の改善、思考の整理に。<br>
+				歴史と経験に裏付けされた禅メソッドがべース。<br>
+			    禅健康法という新しいジャャンル。
+			</div>
+		</div>
+		<div id="topics" class="container">
+			<div class="title-section">
+				<h1>TOPICS</h1>
+				<p>トピックス</p>
+				<div class="title-border"></div>
+			</div>
+		</div>
+		<div id="product" class="container">
+			<div class="title-section">
+				<h1>PRODUCT</h1>
+				<p>製品</p>
+				<div class="title-border"></div>
+			</div>
+			<div class="content-text">
+				zafuは寺院に於いて坐禅をする際<br>
+				使用される坐蒲（ざふ）と言われる座布団が原型の<br>
+			    携帯型空気坐禅座布団です
+			</div>
+		</div>
+		<div id="dialogue" class="container">
+			<div class="title-section">
+				<h1>DIALOGUE</h1>
+				<p>禅対談</p>
+				<div class="title-border"></div>
+			</div>
+			<div class="content-text">
+				様々なジャャンルの方々と禅や体と心の使い方についての対談<br>
+				全6回のシリーズ
+			</div>
+		</div>
+		<div id="column" class="container">
+			<div class="title-section">
+				<h1>COLUMN</h1>
+				<p>一輪一話</p>
+				<div class="title-border"></div>
+			</div>
+			<div class="content-text">
+				写真家藤間久子が写す花と<br>
+				藤井隆栄の禅コラム
+			</div>
+		</div>
+		<div id="profile" class="container">
+			<div class="title-section">
+				<h1>PROFILE</h1>
+				<p>プロフィール</p>
+				<div class="title-border"></div>
+			</div>
+		</div>
+		<footer class="footer">
+			<div class="logo">
+				<img src="./images/zafu_logo.png">
+			</div>
+			<div class="copyright">
+				Copyright&copy;Ryuei Fujii/Zafu Project/Soutaisei Tokyo
+			</div>
+		</footer>
 	</div>
-	<div id="about" class="container">
-		<div class="title-section">
-			<h1>ABOUT US</h1>
-			<p>zafu について</p>
-			<div class="title-border"></div>
-		</div>
-		<div class="content-text">
-			zafuとは、ミッション「禅やマインドフルネスに学んだメソッドやプロダクトにより、<br>
-			ひとりひとりの幸せ・健康で有意義な人生・良好なコミュニティ構築に寄与する。結果として本質的な安楽を伴った<br>
-			社会に必要有用な人材を育成し、善き個の連結による永遠なる世界平和への道筋を導いていくこと」に沿った<br>
-			「身心堂」「zafu ざふ」「安楽坐禅法」等各事業の総称です。
-		</div>
-	</div>
-	<div id="program" class="container">
-		<div class="title-section">
-			<h1>PROGRAM</h1>
-			<p>禅ボディマインドマネジメント講座</p>
-			<div class="title-border"></div>
-		</div>
-		<div class="content-text">
-			からだ・こころ諸症状の改善、思考の整理に。<br>
-			歴史と経験に裏付けされた禅メソッドがべース。<br>
-		    禅健康法という新しいジャャンル。
-		</div>
-	</div>
-	<div id="topics" class="container">
-		<div class="title-section">
-			<h1>TOPICS</h1>
-			<p>トピックス</p>
-			<div class="title-border"></div>
-		</div>
-	</div>
-	<div id="product" class="container">
-		<div class="title-section">
-			<h1>PRODUCT</h1>
-			<p>製品</p>
-			<div class="title-border"></div>
-		</div>
-		<div class="content-text">
-			zafuは寺院に於いて坐禅をする際<br>
-			使用される坐蒲（ざふ）と言われる座布団が原型の<br>
-		    携帯型空気坐禅座布団です
-		</div>
-	</div>
-	<div id="dialogue" class="container">
-		<div class="title-section">
-			<h1>DIALOGUE</h1>
-			<p>禅対談</p>
-			<div class="title-border"></div>
-		</div>
-		<div class="content-text">
-			様々なジャャンルの方々と禅や体と心の使い方についての対談<br>
-			全6回のシリーズ
-		</div>
-	</div>
-	<div id="column" class="container">
-		<div class="title-section">
-			<h1>COLUMN</h1>
-			<p>一輪一話</p>
-			<div class="title-border"></div>
-		</div>
-		<div class="content-text">
-			写真家藤間久子が写す花と<br>
-			藤井隆栄の禅コラム
-		</div>
-	</div>
-	<div id="profile" class="container">
-		<div class="title-section">
-			<h1>PROFILE</h1>
-			<p>プロフィール</p>
-			<div class="title-border"></div>
-		</div>
-	</div>
-	<div></div>
-	<footer class="footer">
-		<div class="logo">
-			<img src="./zafu_photos/zafu-logo.png">
-		</div>
-		<div class="copyright">
-			Copyright&copy;Ryuei Fujii/Zafu Project/Soutaisei Tokyo
-		</div>
-	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="vue.js"></script>
 </body>
 </html>
