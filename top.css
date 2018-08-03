@@ -32,7 +32,7 @@ a:hover {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	/*height: 500px;*/
-	background-color: red;
+	/*background-color: red;*/
 	border: 1px solid blue;
 }
 .main {
@@ -135,7 +135,6 @@ header {
 	transform: translateX(-100px);
 	/*transform: translateX(-100px) scale(1.2);*/
 }
-
 .slide-leave-to {
 	opacity: 0;
 	transform: translateX(100px);
@@ -144,12 +143,13 @@ header {
 .slide-leave-active {
 	position: absolute;
 }
+
 #pagenate-btn {
 	margin-bottom: 1px;
 }
 .slide-btn {
-	width: 30px;
-	height: 30px;
+	width: 10px;
+	height: 10px;
 	margin-left: 10px;
 	border-radius: 15px;
 	border-style: none;
@@ -183,10 +183,66 @@ header {
 
 /* topics */
 #topics-view {
-	width: 60%;
-	height: 300px;
+	width: 70%;
+	height: 500px;
 	margin: 0 auto;
-	border: 1px solid blue;
+	padding: 0 50px;
+	border: 1px solid white;
+}
+.topic-item {
+	height: 400px;
+	/*background-color: orange;*/
+	text-align: left;
+	position: relative;
+	margin: 0 15px;
+}
+.topic-image {
+	height: 55%;
+	width: 100%;
+/*	background: url("./images/zf_1.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-color: lightgray;*/	
+	text-align: center;
+}
+.topic-image img {
+	object-fit: contain;
+}
+.topic-info {
+	position: absolute;
+	bottom: 0;
+	height: 45%;
+}
+.topic-date, .topic-category {
+	width: 49%;
+	height: 20px;
+	font-size: 10px;
+	color: gray;
+	display: inline-block;
+	/*position: absolute;
+	top: 0;
+	left: 0;*/
+}
+.topic-category {
+	text-align: right;
+}
+.topic-title, .topic-schedule {
+	height: 20px;
+	font-size: 11px;
+	font-weight: bold;
+}
+.topic-text {
+	height: 50%;
+	font-size: 10px;
+	margin-top: 5%;
+}
+
+.VueCarousel-slide {
+  /*position: relative;*/
+  /*background: gray;*/
+  	/*height: 100%;*/
+  min-height: 300px;
 }
 /* <-- topics */
 

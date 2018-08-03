@@ -3,7 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<title>zafu</title>
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="top.css">
+	<!-- 開発用 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<!-- 本番用 -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+	<script src="https://ssense.github.io/vue-carousel/js/vue-carousel.min.js"></script>
 </head>
 <body>
 	<header>
@@ -79,7 +84,29 @@
 					<div class="title-border"></div>
 				</div>
 				<div id="topics-view">
-					
+					<carousel :per-page="3"
+							  :scroll-per-page="true"
+							  :navigation-click-target-size="20":navigation-enabled="true"
+							  :navigation-next-label="'▶︎'"
+							  :navigation-prev-label="'◀︎'"
+							  :pagination-enabled="true"
+							  :pagination-active-color="'#000000'"
+							  :pagination-color="'#efefef'"
+							  :pagination-padding="10"
+							  :pagination-size="10">
+						<slide v-for="(item, index) in items" :key="index">
+							<div class="topic-item">
+								<div class="topic-image"><img v-bind:src="item.image"></div>
+								<div class="topic-info">
+									<div class="topic-date">{{ item.date }}</div>
+									<div class="topic-category">{{ item.category }}</div>
+									<div class="topic-title">{{ item.title }}</div>
+									<div class="topic-schedule">{{ item.schedule }}</div>
+									<p class="topic-text">{{ item.text }}</p>
+								</div>
+							</div>
+						</slide>
+					</carousel>
 				</div>
 			</div>
 		</div>
@@ -169,7 +196,6 @@
 			</div>
 		</footer>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-	<script type="text/javascript" src="vue.js"></script>
+	<script type="text/javascript" src="top.js"></script>
 </body>
 </html>
