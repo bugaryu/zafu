@@ -5,13 +5,14 @@
 let header = new Vue({
 	el: '#header',
 });
+
 let pagenate = new Vue({
-	el: '#home',
+	el: '#top',
 	data: {
 		currentPage: 0,
-		images: [ "./images/no1.png",
-				  "./images/no2.png",
-				  "./images/no3.png"
+		images: [ "./images/top1.png",
+				  "./images/top2.png",
+				  "./images/top3.png"
 				],
 		count: 0,
 		timer: null
@@ -41,24 +42,24 @@ let pagenate = new Vue({
 let item1 = { 
 	image: "./images/zf_1.png",
 	date: "2018.5.25",
-	category: "お知らせイベント案内",
-	title: "禅ボディワーク開催のご案内",
+	category: "お知らせイベント案内",
+	title: "禅ボディワーク開催のご案内",
 	schedule: "6 月 17 日(土)14:30~16:30",
 	text: "この文章はzafuホームページのためのダミーテキストです。ここにはzafuや禅、マインドフルネスについての文章が入ります。この文章はzafuホームページのためのダミーテキストです。ここにはzafuや禅、マインドフルネ"
 };
 let item2 = {
 	image: "./images/ssd_1.png",
 	date: "2018.5.25",
-	category: "お知らせイベント案内",
-	title: "禅ボディワーク開催のご案内",
+	category: "お知らせイベント案内",
+	title: "禅ボディワーク開催のご案内",
 	schedule: "6 月 17 日(土)14:30~16:30",
 	text: "この文章はzafuホームページのためのダミーテキストです。ここにはzafuや禅、マインドフルネスについての文章が入ります。この文章はzafuホームページのためのダミーテキストです。ここにはzafuや禅、マインドフルネ"
 };
 let item3 = {
 	image: "./images/zen.png",
 	date: "2018.5.25",
-	category: "お知らせイベント案内",
-	title: "禅ボディワーク開催のご案内",
+	category: "お知らせイベント案内",
+	title: "禅ボディワーク開催のご案内",
 	schedule: "6 月 17 日(土)14:30~16:30",
 	text: "この文章はzafuホームページのためのダミーテキストです。ここにはzafuや禅、マインドフルネスについての文章が入ります。この文章はzafuホームページのためのダミーテキストです。ここにはzafuや禅、マインドフルネ"
 };
