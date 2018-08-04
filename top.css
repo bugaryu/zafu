@@ -484,6 +484,7 @@ footer {
   	transform: translate(0%,-50%);
   	margin:0;
   	padding:0;
-	font-size: 1.3vw
+	font-size: 1.3vw;
+	letter-spacing: 0.1vw
 }
 /* <-- footer */
