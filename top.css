@@ -446,7 +446,7 @@ h4 {
 /* profile */
 #profile {
 	/*float: none;*/
-	margin-top: 15vw;
+	margin-top: 17vw;
 
 }
 #profile .container {
@@ -475,13 +475,13 @@ h4 {
 .imageLeft {
   position: absolute;
   top: 0%;
-  left: 12vw;
+  left: 17.5vw;
   height: 100%;
   width: 100%;
 }
 
 .imageLeft img {
-	width: 70.35%;
+	width: 60%;
 	height: 100%;
 }
 
