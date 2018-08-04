@@ -113,7 +113,7 @@ h4 {
 }
 
 /*hal:ボーダーの設定変更*/
-.header li+ li {
+.menu li+ li {
 	border-left: 1px solid #333;
 	padding-left: 1.2vw;
 }
@@ -123,7 +123,6 @@ h4 {
 #top {
 	width: 100%;
 	text-align: center;
-	margin: 0 auto;
 }
 .slide-image {
 	width: 100%;
