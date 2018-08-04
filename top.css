@@ -2,7 +2,7 @@
 
 /* 共通のcss */
 div, header, footer, li, ul, img {
-	/*border: 1px solid blue;*/
+	border: 1px solid blue;
 }
 * {
 	margin: 0;
@@ -39,6 +39,7 @@ a:hover {
 	width: 100%;
 	position: absolute;
 	top: 100px;
+	scroll-behavior: smooth;
 }
 /* title */
 h1 {
@@ -102,46 +103,33 @@ header {
 }
 /* <-- header */
 
-/* top-content */
-.top-content {
-	/*height: 900px;*/
-	/*background-color: red;*/
-}
-#pagenate {
-	width: 900px;
-	height: 700px;
-	/*overflow: hidden;*/
+/* home */
+#home {
 	text-align: center;
-	margin: 30px auto 0 auto;
-	/*background-color: green;*/
-}
-.slide-image {
-	width: 900px;
-	height: 600px;
-	/*overflow: hidden;*/
-	text-align: center;
-	margin: 0 auto;
-	/*background-color: orange;*/
+	min-height: 100%;
 }
 .slide-image img {
-	width: 800px;
+	/*object-fit: contain;*/
+	width: 100%;
+	height: auto;
 }
 
-.slide-enter-active, .slide-leave-active {
-	transition: all 1.5s 0s;
+.slide-enter-active {
+	transition: all 2s ease-in 0s;
+}
+.slide-leave-active {
+	transition: all 2s ease-in 0s;
+	position: absolute;
 }
 .slide-enter {
 	opacity: 0;
-	transform: translateX(-100px);
+	transform: translateX(100px);
 	/*transform: translateX(-100px) scale(1.2);*/
 }
 .slide-leave-to {
 	opacity: 0;
-	transform: translateX(100px);
+	transform: translateX(-100px);
 	/*transform: translateX(100px) scale(0.8);	*/
-}
-.slide-leave-active {
-	position: absolute;
 }
 
 #pagenate-btn {
@@ -161,7 +149,7 @@ header {
 .page-active {
 	background-color: #C65248;
 }
-/* <-- top-content */
+/* <-- home */
 
 /* about */
 #about .container {

@@ -2,11 +2,13 @@
 // import VueCarousel from 'vue-carousel';
 // Vue.use(VueCarousel);
 // import { Carousel, Slide } from 'vue-carousel';
-
-var pagenate = new Vue({
-	el: '#pagenate',
+let header = new Vue({
+	el: '#header',
+});
+let pagenate = new Vue({
+	el: '#home',
 	data: {
-		current: 0,
+		currentPage: 0,
 		images: [ "./images/no1.png",
 				  "./images/no2.png",
 				  "./images/no3.png"
@@ -20,16 +22,16 @@ var pagenate = new Vue({
 	},
 	methods: {
 		change: function (event) {
-			// console.log(`this id: ${this.current}, target id: ${event.target.value}`);
-			this.current = event.target.value;
+			// console.log(`this id: ${this.currentPage}, target id: ${event.target.value}`);
+			this.currentPage = event.target.value;
 		},
 		nextPage: function () {
-			this.current = (this.current + 1) % this.count;
-			//console.log(`go to next Page. page id: ${this.current}`);
+			this.currentPage = (this.currentPage + 1) % this.count;
+			//console.log(`go to next Page. currentPage id: ${this.currentPage}`);
 		},
 	},
 	watch: {
-		current: function () {
+		currentPage: function () {
 			clearTimeout(this.timer);
 			this.timer = setTimeout(this.nextPage, 5000);
 		}
@@ -61,7 +63,7 @@ let item3 = {
 	text: "この文章はzafuホームページのためのダミーテキストです。ここにはzafuや禅、マインドフルネスについての文章が入ります。この文章はzafuホームページのためのダミーテキストです。ここにはzafuや禅、マインドフルネ"
 };
 
-var carousel = new Vue({
+let carousel = new Vue({
 	el: '#topics-view',
 	components: {
 		'carousel': VueCarousel.Carousel,
@@ -71,4 +73,7 @@ var carousel = new Vue({
 		label: "next",
 		items: [item1, item2, item3, item1, item2, item3]
 	}
+});
+let footer = new Vue({
+	el: "#footer"
 });
