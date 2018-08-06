@@ -36,7 +36,7 @@
 					 v-for="(url, page) in images" 
 					 v-if="currentPage == page" 
 					 :key="page">
-					<img :src="url">
+					<a href="#"><img :src="url"></a>
 				</div>
 			</transition>
 			<div id="pagenate-btn">

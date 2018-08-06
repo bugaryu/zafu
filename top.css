@@ -1,5 +1,5 @@
 /* 共通のcss */
-div, header, footer, li, ul, img {
+div, header, footer, li, ul, img button{
 	/*border: 1px solid blue;*/
 }
 * {
@@ -124,11 +124,25 @@ h4 {
 	width: 100%;
 	text-align: center;
 }
+
 .slide-image {
 	width: 100%;
-	height: 100%;
+	height: 50vw;
 	text-align: center;
 	margin: 0 auto;
+	background-color: #191919;
+}
+
+.slide-image a {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.slide-image a:hover{
+    /*background-color: #191919;*/
+    /*filter: alpha(opacity=50);*/
+    /*-moz-opacity: 0.5;*/
+    opacity: 0.5;
 }
 .slide-image img {
 	width: 100%;
@@ -151,11 +165,12 @@ h4 {
 }
 
 #pagenate-btn {
-	margin-bottom: 1px;
+	/*margin-bottom: 1px;*/
+	margin-top: 10px;
 }
 .slide-btn {
-	width: 1vw;
-	height: 1vw;
+	width: 15px;
+	height: 15px;
 	margin-left: 1vw;
 	border-radius: 50%;
 	border-style: none;
