@@ -14,6 +14,9 @@ let pagenate = new Vue({
 				  "./images/top2.png",
 				  "./images/top3.png"
 				],
+		links: [ "#profile",
+				"#pdcWrapper",
+				"#program"],
 		count: 0,
 		timer: null
 	},

@@ -36,7 +36,7 @@
 					 v-for="(url, page) in images" 
 					 v-if="currentPage == page" 
 					 :key="page">
-					<a href="#"><img :src="url"></a>
+					<a href="" v-scroll-to="links[page]"><img :src="url"></a>
 				</div>
 			</transition>
 			<div id="pagenate-btn">
@@ -86,6 +86,8 @@
 					<div class="title-border"></div>
 				</div>
 				<div id="topics-view">
+					<!-- <img class="navigation-btn navigation-btn-left" src="./images/btnLeft.png">
+					<img class="navigation-btn navigation-btn-right" src="./images/btnLeft.png"> -->
 					<carousel :per-page="3"
 							  :scroll-per-page="true"
 							  :navigation-click-target-size="20":navigation-enabled="true"
@@ -98,6 +100,7 @@
 							  :pagination-size="10">
 						<slide v-for="(item, index) in items" :key="index">
 							<div class="topic-item">
+								<a href=""></a>
 								<div class="topic-image"><img v-bind:src="item.image" alt=""/></div>
 								<div class="topic-info">
 									<div class="topic-date">{{ item.date }}</div>

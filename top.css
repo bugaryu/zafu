@@ -230,17 +230,48 @@ h4 {
 /* <-- program */
 
 /* topics */
-#topics-view {
-	width: 70%;
-	margin: 0 auto;
-	padding: 0 50px;
-	border: 1px solid white;
+#topics .container {
+	background-color: lightgray;
+	/*opacity: 0.5;*/
 }
+#topics-view {
+	width: 70vw;
+	height: 45vw;
+	margin: 0 auto;
+	border: 1px solid white;
+	/*display: inline-block;*/
+}
+img.navigation-btn {
+	width: 20px;
+	height: 20px;
+	object-fit: contain;
+	margin: 0 auto;
+	/*position: relative;
+	top: 50%;	
+	left: -50px;*/
+	border: 1px solid black;
+	/*display: inline-block;*/
+	float: left;
+	z-index: 10;
+}
+
 .topic-item {
 	height: 35vw;
+	/*height: 60vw;*/
 	text-align: left;
 	position: relative;
 	margin: 0 1.5vw;
+}
+.topic-item a {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+.topic-item a:hover{
+    /*background-color: #191919;*/
+    /*filter: alpha(opacity=50);*/
+    /*-moz-opacity: 0.5;*/
+    opacity: 0.5;
 }
 .topic-image {
 	width: 100%;
@@ -261,18 +292,14 @@ h4 {
 	color: gray;
 	display: inline-block;
 }
-
 .topic-date {
 	float: left;
 	text-align: left;
 }
-
 .topic-category {
 	float: right;
 	text-align: right;
 }
-
-
 .topic-title, .topic-schedule {
 	font-size: 1vw;
 	font-weight: bold;
