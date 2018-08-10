@@ -61,7 +61,7 @@ h4 {
 .content-text {
 	text-align: center;
 	font-size: 1vw;
-	line-height: 2.2;
+	line-height: 2.2vw;
 }
 
 /* <-- 共通のcss */
@@ -147,31 +147,30 @@ h4 {
 }
 .slide-image img {
 	width: 100%;
+	height: 100%;
 }
 
 .slide-enter-active {
-	transition: all 2s ease-in 0s;
+	transition: all 1.5s ease-in 0s;
 }
 .slide-leave-active {
-	transition: all 2s ease-in 0s;
+	transition: all 1.5s ease-in 0s;
 	position: absolute;
 }
 .slide-enter {
 	opacity: 0;
-	transform: translateX(100px);
 }
 .slide-leave-to {
 	opacity: 0;
-	transform: translateX(-100px);
 }
 
 #pagenate-btn {
 	/*margin-bottom: 1px;*/
-	margin-top: 10px;
+	margin-top: 3vw;
 }
 .slide-btn {
-	width: 15px;
-	height: 15px;
+	width: 1.3vw;
+	height: 1.3vw;
 	margin-left: 1vw;
 	border-radius: 50%;
 	border-style: none;
@@ -232,7 +231,7 @@ h4 {
 
 /* topics */
 #topics .container {
-	background-color: lightgray;
+	/*background-color: lightgray;
 	/*opacity: 0.5;*/
 }
 #topics-view {
@@ -264,14 +263,14 @@ img.navigation-btn {
 	margin: 0 1.5vw;
 }
 .topic-item a {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	height: 100%;
 }
 .topic-item a:hover{
-    /*background-color: #191919;*/
-    /*filter: alpha(opacity=50);*/
-    /*-moz-opacity: 0.5;*/
+    background-color: hsla(0,0%,100%,0.5);*/
+    filter: alpha(opacity=50);*/
+    -moz-opacity: 0.5;*/
     opacity: 0.5;
 }
 .topic-image {
