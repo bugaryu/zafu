@@ -131,7 +131,7 @@ h4 {
 	height: 50vw;
 	text-align: center;
 	margin: 0 auto;
-	background-color: #191919;
+	background-color: #2A2A2A;
 }
 
 .slide-image a {
@@ -165,7 +165,7 @@ h4 {
 }
 
 #pagenate-btn {
-	/*margin-bottom: 1px;*/
+	margin-bottom: 2vw;
 	margin-top: 3vw;
 }
 .slide-btn {
