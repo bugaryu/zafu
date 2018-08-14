@@ -100,7 +100,7 @@
 							  :pagination-size="10">
 						<slide v-for="(item, index) in items" :key="index">
 							<div class="topic-item">
-								<a href=""></a>
+								<a :href="item.link"></a>
 								<div class="topic-image"><img v-bind:src="item.image" alt=""/></div>
 								<div class="topic-info">
 									<div class="topic-date">{{ item.date }}</div>

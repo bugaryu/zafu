@@ -238,6 +238,7 @@ h4 {
 	width: 70vw;
 	height: 45vw;
 	margin: 0 auto;
+	padding-top: 30px;
 	border: 1px solid white;
 	/*display: inline-block;*/
 }

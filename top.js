@@ -43,6 +43,7 @@ let pagenate = new Vue({
 });
 
 let item1 = { 
+	link: "#about",
 	image: "./images/zf_1.png",
 	date: "2018.5.25",
 	category: "お知らせイベント案内",
@@ -51,6 +52,7 @@ let item1 = {
 	text: "この文章はzafuホームページのためのダミーテキストです。ここにはzafuや禅、マインドフルネスについての文章が入ります。この文章はzafuホームページのためのダミーテキストです。ここにはzafuや禅、マインドフルネ",
 };
 let item2 = {
+	link: "#program",
 	image: "./images/ssd_1.png",
 	date: "2018.5.25",
 	category: "お知らせイベント案内",
@@ -59,6 +61,7 @@ let item2 = {
 	text: "この文章はzafuホームページのためのダミーテキストです。ここにはzafuや禅、マインドフルネスについての文章が入ります。この文章はzafuホームページのためのダミーテキストです。ここにはzafuや禅、マインドフルネ"
 };
 let item3 = {
+	link: "#dialogue",	
 	image: "./images/zen.png",
 	date: "2018.5.25",
 	category: "お知らせイベント案内",
