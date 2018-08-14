@@ -77,7 +77,8 @@ let carousel = new Vue({
 		'slide': VueCarousel.Slide
 	},
 	data: {
-		label: "next",
+		navBtnLeft: "<img class=\"navigation-btn\" src=\"./images/btnLeft.png\">",
+		navBtnRight: "<img class=\"navigation-btn\" src=\"./images/btnRight.png\">",
 		items: [item1, item2, item3, item1, item2, item3]
 	}
 });

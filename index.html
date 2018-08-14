@@ -86,21 +86,19 @@
 					<div class="title-border"></div>
 				</div>
 				<div id="topics-view">
-					<!-- <img class="navigation-btn navigation-btn-left" src="./images/btnLeft.png">
-					<img class="navigation-btn navigation-btn-right" src="./images/btnLeft.png"> -->
 					<carousel :per-page="3"
 							  :scroll-per-page="true"
-							  :navigation-click-target-size="20":navigation-enabled="true"
-							  :navigation-next-label="'▶︎'"
-							  :navigation-prev-label="'◀︎'"
+							  :navigation-click-target-size="50"
+							  :navigation-enabled="true"
+							  :navigation-next-label="navBtnRight"
+							  :navigation-prev-label="navBtnLeft"
 							  :pagination-enabled="true"
 							  :pagination-active-color="'#000000'"
 							  :pagination-color="'#efefef'"
 							  :pagination-padding="10"
 							  :pagination-size="10">
 						<slide v-for="(item, index) in items" :key="index">
-							<div class="topic-item">
-								<a :href="item.link"></a>
+							<div class="topic-item"><a :href="item.link">
 								<div class="topic-image"><img v-bind:src="item.image" alt=""/></div>
 								<div class="topic-info">
 									<div class="topic-date">{{ item.date }}</div>
@@ -109,7 +107,7 @@
 									<div class="topic-schedule">{{ item.schedule }}</div>
 									<p class="topic-text">{{ item.text }}</p>
 								</div>
-							</div>
+							</a></div>
 						</slide>
 					</carousel>
 				</div>

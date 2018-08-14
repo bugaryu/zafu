@@ -239,21 +239,10 @@ h4 {
 	height: 45vw;
 	margin: 0 auto;
 	padding-top: 30px;
-	border: 1px solid white;
-	/*display: inline-block;*/
 }
+　/* ナビゲーションボタン */
 img.navigation-btn {
-	width: 20px;
-	height: 20px;
-	object-fit: contain;
-	margin: 0 auto;
-	/*position: relative;
-	top: 50%;	
-	left: -50px;*/
-	border: 1px solid black;
-	/*display: inline-block;*/
-	float: left;
-	z-index: 10;
+	/*object-fit: contain;*/
 }
 
 .topic-item {
@@ -269,9 +258,9 @@ img.navigation-btn {
 	height: 100%;
 }
 .topic-item a:hover{
-    background-color: hsla(0,0%,100%,0.5);*/
-    filter: alpha(opacity=50);*/
-    -moz-opacity: 0.5;*/
+    background-color: hsla(0,0%,100%,0.5);
+    filter: alpha(opacity=50);
+    -moz-opacity: 0.5;
     opacity: 0.5;
 }
 .topic-image {
