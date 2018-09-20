@@ -3,6 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<title>zafu</title>
+	<script src="https://use.typekit.net/cql4cbr.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<link rel="stylesheet" type="text/css" href="top.css">
 	<!-- <link rel="stylesheet" href="https://use.typekit.net/cql4cbr.css"> -->
 	<!-- 開発用 -->
@@ -13,7 +15,9 @@
 	<script src="https://unpkg.com/vue-scrollto"></script>
 </head>
 <body>
+<div class="all">
 	<header id="header"><!--hal:headerクラス追加-->
+		<div class="header-manager">
 		<div class="logo">
 			<a href="" v-scroll-to="'#top'"><img src="./images/zafu_logo.png" alt=""/></a>
 		</div>
@@ -28,8 +32,10 @@
 				<li class="menuLis"><a href="" v-scroll-to="'#profile'">PROFILE</a></li>
 			</ul>
 		</nav>
+		</div>
 	</header>
 	<div class="main">
+		<div class="top-manager">
 		<div id="top" class="top-margin">
 			<transition name="slide">
 				<div class="slide-image" 
@@ -39,6 +45,7 @@
 					<a href="" v-scroll-to="links[page]"><img :src="url"></a>
 				</div>
 			</transition>
+			<div class="btn-manager">
 			<div id="pagenate-btn">
 				<button class="slide-btn" 
 						:class="{ 'page-active': currentPage == page }" 
@@ -48,7 +55,11 @@
 				</button>
 			</div>
 		</div>
+		</div>
+		</div>
+		<div class="about-manager">
 		<div id="about" class="top-margin">
+			<div class="about-inner">
 			<div class="container">
 				<div class="title-section">
 					<h3>ABOUT US</h3>
@@ -62,10 +73,14 @@
 					「身心堂」「zafu ざふ」「安楽坐禅法」等各事業の総称です。
 				</div>
 			</div>
+			</div>
 		</div>
+		</div>
+		<div class="program-manager">
 		<div id="program" class="top-margin">
 			<div class="container">
-				<a href="#"></a>
+			<div class="program-background">
+				<a href="http://bosan32000.wixsite.com/sinsindo/blank"></a>
 				<div class="title-section">
 					<h3>PROGRAM</h3>
 					<h4>禅ボディマインドマネジメント講座</h4>
@@ -78,26 +93,33 @@
 				</div>
 			</div>
 		</div>
-		<div id="topics" class="top-margin">
+		</div>
+		</div>
+		<div class="topics-manager">
+			<div id="topics" class="top-margin">
 			<div class="container">
 				<div class="title-section">
 					<h3>TOPICS</h3>
 					<h4>トピックス</h4>
 					<div class="title-border"></div>
 				</div>
-				<div id="topics-view">
+				<div class="morebtn">
+					<a href="topics01.html"></a>
+			    	<img src="images/morebtn.png" alt=""/>
+				</div>
+			  <div id="topics-view">
 					<carousel :per-page="3"
 							  :scroll-per-page="true"
-							  :navigation-click-target-size="50"
+							  :navigation-click-target-size="30"
 							  :navigation-enabled="true"
 							  :navigation-next-label="navBtnRight"
 							  :navigation-prev-label="navBtnLeft"
 							  :pagination-enabled="true"
-							  :pagination-active-color="'#000000'"
+							  :pagination-active-color="'#DC143C'"
 							  :pagination-color="'#efefef'"
 							  :pagination-padding="10"
 							  :pagination-size="10">
-						<slide v-for="(item, index) in items" :key="index">
+						<slide v-for="(item, index) in items" :key="index" class="slideManager">
 							<div class="topic-item"><a :href="item.link">
 								<div class="topic-image"><img v-bind:src="item.image" alt=""/></div>
 								<div class="topic-info">
@@ -113,10 +135,13 @@
 				</div>
 			</div>
 		</div>
+		</div>
 		<div id="pdcWrapper" class="top-margin">
+			<div class="pdc-manager">
 			<div class="container">
 				<div class="prWrapper">
-					<a href="#"></a>
+				<div class="pr-background">
+					<a href="http://bosan32000.wixsite.com/sinsindo/members"></a>
 					<div class="prModifer">
 						<div class="title-section">
 			 				<h3>PRODUCT</h3>
@@ -130,10 +155,12 @@
 						</div>
 				  	</div>
  	 			</div>
+				</div>
 				<div class="dcWrapper">
-					<div id="dialogue" class="top-margin">
-						<div class="dWrapper">
-							<a href="#"></a>
+					<div class="dWrapper">
+						<div id="dialogue" class="top-margin">
+						<div class="d-background">
+							<a href="dialogue.html"></a>
 							<div class="dModifer">
 								<div class="title-section">
 									<h3>DIALOGUE</h3>
@@ -146,11 +173,12 @@
 								</div>
 						  	</div>
 					  	</div>
+						</div>
 				  	</div>
-				</div> 
+				<div class="cWrapper">
 				<div id="column" class="top-margin">
-					<div class="cWrapper">
-						<a href="#"></a>
+					<div class="c-background">
+						<a href="column.html"></a>
 						<div class="cModifer">
 							<div class="title-section">
 								<h3>COLUMN</h3>
@@ -163,7 +191,10 @@
 							</div>
 						</div>
 					</div>
+					</div>
 				</div>
+				</div>
+			</div>
 			</div> <!--pdc.container-->
 		</div> <!--pdcWrapper-->
 		<div id="profile" class="top-margin">
@@ -173,7 +204,7 @@
 					<h4>プロフィール</h4>
 					<div class="title-border"></div>
 				</div>
-				<div id="profile-content">
+				<div id="profile-content" class="profile-manager">
 					<div class="leftMother">
 						<div class="leftChild">
 							 <img src="images/proSolo.png" width="489" height="695" alt=""/>
@@ -183,22 +214,44 @@
 						<div class="rightChild">
 							<h3>藤井 隆英<span>(ふじい りゅうえい)</span></h3>
 							<p> 
-								禅による運動療法、動的瞑想指導の第一人者。仏教身体研究家。<br>
-								zafu 代表。身心堂 主宰 主任講師。「zafu ざふ」「安楽坐禅法」開発者。<br>
+								禅の身体育てとなる運動療法、動的瞑想指導の第一人者。仏教身体研究家。<br>
+								zafu代表。身心堂 主宰 主任講師。「zafuざふ」「安楽坐禅法」開発者。<br>
 								禅の身体・哲学・社会活動・マインドフルネスに通じる僧。<br>
-								曹洞宗 ( 禅宗 ) 僧侶。整体師。豊橋市一月院副住職。横浜建功寺勤務。八王子市在住。
+								曹洞宗(禅宗)僧侶。整体師。愛知 一月院副住職。横浜 建功寺勤務。
 							</p>
 							<p>
 								北海道大学水産学部漁業学科卒業。同大学院中退。<br>
-								阪神淡路大震災の復興ボランティア活動に参加。SVA(シャンティ国際 ボランティア会)職員、識字学級ひまわりの会事務局長、霊祭執行など、 約 10 年間神戸において多種に渡って活動する。<br>
-								神戸在住中にナショナル整体学園を修了。被災者への整体や、健康講座なども行う。<br>
-								健康法においては、禅的体操を提唱している臨済宗僧侶 樺島勝徳を師とする。 <br>
-								マインドフルネスの祖である世界的なベトナム僧侶ティク・ナット・ハン師を信奉。<br>
-								人生の機微なる事柄に問いを立て、思惟し湧き出した言葉を詩の形にまとめた「思惟詩」の制作、発表。<br>
-								講座講演著作多数。
+								大学時代は魚類の聴覚の研究を行う。<br>
+								国内有数のＮＧＯ団体であるＳＶＡ(ｼｬﾝﾃｨ国際ﾎﾞﾗﾝﾃｨｱ会)職員として、阪<br>
+								神淡路大震災の復興ボランティア活動に参加。立ち上げた識字学級の事務<br>
+								局長、慰霊祭執行など、10年間多種に渡って活動する。
 							</p>
-							<p id="profession">日本マインドフルネス学会会員<br>
-									朝日カルチャー講師
+							<p>
+								被災者の身体からの回復アプローチを見据え、ナショナル整体学園にて整<br>
+								体を学び修了。被災者への施術や健康講座を行う。<br>
+								関東に移り、2012年より身心堂として、数々の講演やワークショップ、企<br>
+								業研修を行う。<br>
+								2015年より「禅ボディマインドマネジメント講座」を開始、禅ケアメソッ<br>
+								ドを学び伝える人材を育てている。<br>
+								2017年にクラウドファウンディングにて「zafuざふ」製作プロジェクト<br>
+								成功。一般販売し、万人への坐禅普及を進めている。
+							</p>
+							<p>
+								健康法においては、禅的体操を提唱している臨済宗僧侶 樺島勝徳を師とする。<br>
+								マインドフルネスの祖 世界的に有名なベトナム僧侶ティク・ナット・ハン師<br>
+								を信奉。<br>
+								2015年にハン師のお弟子さんが導く1000人規模のネット瞑想「マインド<br>
+								フルネス・アワー」を成功させ、現在教えを学ぶ日本人僧侶グループを構築。<br>
+								人生の機微なる事柄に問いを立て、思惟し沸き出した言葉を詩のの形にま<br>
+								とめた「思惟詩」の制作、発表。
+							</p>
+							<p>
+								「身体と心をととのえる禅の作法」他、連載含め著書多数。<br>
+								日本マインドフルネス学会会員<br>
+								朝日カルチャー講師<br>
+								FBページhttps://www.facebook.com/ryuei.fujii<br>
+								メールbosan32000@yahoo.co.jp<br>
+								電話090-8199-1476
 							</p>
 						</div>
 					</div>
@@ -206,14 +259,17 @@
 			</div>
 		</div>
 		<footer id="footer">
+		<div class="footer-manager">
 			<div class="logo">
 				<a href="" v-scroll-to="'#top'"><img src="./images/zafu_logo.png" alt=""/></a>
 			</div>
 			<div class="copyright">
 				Copyright&copy;Ryuei Fujii/Zafu Project/Soutaisei Tokyo
 			</div>
-		</footer>
+		</div>
+	</footer>
 	</div> <!--main-->
+	</div>
 	<script type="text/javascript" src="top.js"></script>
 </body>
 </html>

@@ -1,0 +1,438 @@
+* {
+	font-family: "itc-avant-garde-gothic-pro";
+}
+
+html, body {
+	border: none;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+	transition: all .1s;
+}
+a:hover {
+	text-decoration: none;
+	color: gray;
+}
+
+
+body {
+	margin: -100px 0 0 0;
+	padding: 0;
+}
+
+.title-border {
+	width: 60px;
+	border-bottom: 2px solid lightgray;
+	margin: 20px auto;
+}
+
+
+/* header */
+#header {
+	height: 80px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: white;
+	z-index: 30;
+	-webkit-box-shadow: 0px 0px 1vw #808080;
+	box-shadow: 0px 0px 1vw #808080;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.headerMenu {
+	margin-right: 10px;
+}
+
+#header img { 
+	width: 90px;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+.menu li  {
+	display: inline-block;
+	padding-right: 15px;
+	font-weight: 100;
+	font-size: 13px;
+}
+
+.menu li+ li {
+	border-left: 1px solid #333;
+	padding-left: 20px;
+}
+
+.header-manager {
+	width: 1100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+/* <-- header */
+
+/*talk*/
+
+.talk {
+	margin-top: -70px;
+}
+
+.dialogue-title h3{
+	font-size: 25px;
+	font-weight: 100;
+	letter-spacing: 5px;
+	text-align: center;
+}
+
+.dialogue-title h4 {
+	font-size: 12px;
+	font-weight: 100;
+	text-align: center;
+	margin-top: -25px;
+}
+
+.numbering-section, .title-section {
+	display: flex;
+	width: 100%;
+	height: 150px;
+	align-items: center;
+}
+
+.numberWrapper {
+	display: flex;
+	align-items: center;
+	width: 50%;
+	height: 150px;
+}
+
+.nameWrapper {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	width: 50%;
+	height: 150px;
+}
+
+.numberWrapper h2 {
+	font-size:  150px;
+	font-weight: 100;
+	letter-spacing: 5px;
+}
+
+.nameWrapper img {
+	width: 45px;
+	margin-right: 15px;
+	margin-bottom: 5px;
+}
+
+.nameWrapper h3 {
+	margin-top: 32px;
+	font-family: "a-otf-futo-min-a101-pr6n";
+	font-size: 40px;
+	font-weight: 100;
+	letter-spacing: 0px;
+}
+
+.textContaiter {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.textWrapper {
+	min-width: 500px;
+	max-width: 700px;
+	margin: 250px auto;
+}
+
+.talk-section h3 {
+	font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 0px;
+}
+
+.talk-section {
+	margin-top: 60px;
+	text-align: justify;
+}
+
+.talk-section h4 {
+	font-size: 12px;
+	font-weight: bold;
+	margin-top: 50px;
+}
+
+.talk-section p {
+	font-size: 12px;
+	line-height: 20px;
+	margin-top: 30px;
+}
+
+.profile {
+	margin-top: 60px;
+}
+
+.profile img{
+	width: 200px
+}
+
+.profile p {
+	font-size: 12px;
+	line-height: 20px;
+}
+
+/*ソーシャル*/
+
+.share {
+	margin-top: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.share-text {
+	width: 50%;
+}
+
+.share-text p {
+	font-size: 12px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.social {
+	width: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+
+.facebook {
+	width: 21px;
+	height: 21px;
+	position: relative;
+	z-index: 10;
+}
+
+.facebook img {
+	width: 100%;
+}
+
+.facebook a {
+	position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    text-size:0px;
+	z-index: 20;
+}
+
+.twitter {
+	width: 21px;
+	height: 21px;
+	position: relative;
+	z-index: 10;
+	margin: 0 5px;
+}
+
+.facebook a:hover {
+    background-color:hsla(0,0%,0%,0.50);
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.twitter img {
+	width: 100%;
+}
+
+.twitter a {
+	position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    text-size:0px;
+	z-index: 20;
+}
+
+.twitter a:hover {
+    background-color:hsla(0,0%,0%,0.50);
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+/*記事移動*/
+.article {
+	margin-top: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.article p {
+	margin: 0 10px;
+	font-size: 12px;
+}
+
+.prev-off {
+	width: 100px;
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	color: hsla(0,0%,78%,1.00)
+}
+
+.prev-on {
+	position: relative;
+	width: 100px;
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+}
+
+.prev-on a {
+	position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    text-size:0px;
+	z-index: 20;
+}
+
+.prev-on a:hover {
+    background-color:hsla(0,0%,100%,0.70);
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+
+.next-on {
+	width: 100px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.next-off {
+	width: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	color: hsla(0,0%,78%,1.00)
+}
+
+.next-on a {
+	position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    text-size:0px;
+	z-index: 20;
+}
+
+.next-on a:hover {
+    background-color:hsla(0,0%,100%,0.70);
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+}
+
+.sign {
+	margin-top: 45px;
+	margin-bottom: -70px;
+	height: 45px;
+	border: solid;
+	border-width: 1px 0;
+	display: flex;
+	align-items: center;
+}
+
+.sign p {
+	margin-left: 4px;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+/* footer */
+#footer {
+	position: relative;
+	width: 100%;
+	height: 70px;
+	background-color: lightgray;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.footer-manager {
+	width: 1100px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#footer img {
+	width: 90px;
+	margin-left: 20px;
+	margin-top: 2px;
+}
+.copyright {
+	margin-right: 20px;
+	font-size: 12px;
+	letter-spacing: 1px;
+}
+/* <-- footer */
+
+/*topics*/
+.title-section {
+	margin-bottom: 10px;
+}
+
+.title-section h3 {
+	margin-top: 0px;
+	font-size: 16px;
+	font-weight: 100;
+	text-align: left;
+}
+
+.title-section p {
+	margin-top: -10px;
+	font-size: 12px;
+	color: gray;
+}
+
+.caption {
+	margin-top: 40px;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+/*column*/
+.coming-soonW {
+	margin-top: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+}
+
+@media (max-width: 850px){
+	#header {
+		width: 850px;
+}
+	#footer {
+		width: 850px;
+	}
