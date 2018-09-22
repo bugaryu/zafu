@@ -1,11 +1,11 @@
- /* 共通のcss */
+/* 共通のcss */
 
 
 div, header, footer, li, ul, img button{
 	/*border: 1px solid blue;*/
 }
 * {
-	
+
 	font-family: "itc-avant-garde-gothic-pro"
 }
 
@@ -45,7 +45,7 @@ a:hover {
 
 .all {
 	width: 100%;
-	min-width: 880px;
+	max-width: 1500px;
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
@@ -91,10 +91,13 @@ h4 {
 
 .header-core {
 	margin-top: -80px;
+	max-width: 1500px;
+	min-width: 880px;
 }
 
 #header {
 	width: 100%;
+min-width: 880px;
 	height: 80px;
 	background-color: lightgray;
 	display: flex;
@@ -108,7 +111,7 @@ h4 {
 }
 
 
-#header img { 
+#header img {
 	width: 90px;
 	margin-left: 20px;
 	margin-top: 5px;
@@ -127,11 +130,10 @@ h4 {
 }
 
 .header-manager {
-	width: 100%;
+	width: 1500px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	min-width: 880px;
 }
 
 .headerMenu {
@@ -144,13 +146,13 @@ h4 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
+
 }
 
 #top {
 	width: 100%;
 	height: 650px;
-	
+
 }
 
 .slide-image {
@@ -229,7 +231,7 @@ h4 {
 #about {
 	width: 100%;
 	height: 400px;
-	margin-top: 80px; 
+	margin-top: 80px;
 }
 
 
@@ -269,8 +271,8 @@ h4 {
 }
 
 #program .title-section {
-	padding-top: 15px; 
-	margin-top: -30px;	
+	padding-top: 15px;
+	margin-top: -30px;
 	margin-bottom: 0px;
 	color: white;
 }
@@ -306,37 +308,29 @@ h4 {
 	align-items: center;
 	justify-content: center;
 	margin-bottom: -70px;
-	width: 80%;
+	width: 100%;
 	max-width: 1400px;
-	min-width: 880px;
 }
-
 
 #topics {
 	display: flex;
 	justify-content: center;
 }
 
-.topics-mother {
-	display: flex;
-	justify-content: center;
-}
-
 .topics-core {
-	width: 90%;
 	display: flex;
 	justify-content: center;
 }
 
 
 #topics-view {
-	width: 90%;
+	width: 82%;
 	height: 450px;
 	padding-top: 30px;
 }
 
 .morebtn {
-	width: 89%;
+	width: 95%;
 	display: flex;
 	justify-content: flex-end;
 	position: relative;
@@ -363,7 +357,7 @@ img.navigation-btn {
 }
 
 .slideManager {
-	width: 90%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 }
@@ -456,7 +450,7 @@ img.navigation-btn {
 }
 
 .prModifer {
-  margin-top: 120px; 
+  margin-top: 120px;
 }
 
 .prWrapper a {
@@ -534,7 +528,7 @@ img.navigation-btn {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-		
+
 }
 
 
@@ -567,7 +561,7 @@ img.navigation-btn {
 
 
 .profile-manager {
-	margin-top: 50px; 
+	margin-top: 50px;
 	display: flex;
 	justify-content: center;
 }
@@ -585,7 +579,7 @@ img.navigation-btn {
 }
 
 .leftChild {
-	margin-right: 15px; 
+	margin-right: 15px;
 }
 
 
@@ -628,7 +622,7 @@ img.navigation-btn {
 }
 
 .footer-manager {
-	width: 100%;
+	width: 1500px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -645,6 +639,3 @@ img.navigation-btn {
 	letter-spacing: 1px;
 }
 /* <-- footer */
-@media (max-width: 1105px){
-	
-}

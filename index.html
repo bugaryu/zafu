@@ -6,8 +6,6 @@
 	<script src="https://use.typekit.net/cql4cbr.js"></script>
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<link rel="stylesheet" type="text/css" href="top.css">
-	<style type="text/css">
-	</style>
 	<!-- <link rel="stylesheet" href="https://use.typekit.net/cql4cbr.css"> -->
 	<!-- 開発用 -->
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -42,19 +40,19 @@
 		<div class="top-manager">
 		<div id="top" class="top-margin">
 			<transition name="slide">
-				<div class="slide-image" 
-					 v-for="(url, page) in images" 
-					 v-if="currentPage == page" 
+				<div class="slide-image"
+					 v-for="(url, page) in images"
+					 v-if="currentPage == page"
 					 :key="page">
 					<a href="" v-scroll-to="links[page]"><img :src="url"></a>
 				</div>
 			</transition>
 			<div class="btn-manager">
 			<div id="pagenate-btn">
-				<button class="slide-btn" 
-						:class="{ 'page-active': currentPage == page }" 
-						v-for="(url, page) in images" 
-						:value="page" 
+				<button class="slide-btn"
+						:class="{ 'page-active': currentPage == page }"
+						v-for="(url, page) in images"
+						:value="page"
 						@click="change">
 				</button>
 			</div>
@@ -99,7 +97,6 @@
 		</div>
 		</div>
 		</div>
-		<div class="topics-mother">
 		<div class="topics-manager">
 			<div id="topics" class="top-margin">
 			<div class="container">
@@ -112,7 +109,6 @@
 					<a href="topics01.html"></a>
 			    	<img src="images/morebtn.png" alt=""/>
 				</div>
-				<div class="topics-mother">
 				<div class="topics-core">
 			  <div id="topics-view">
 					<carousel :per-page="3"
@@ -141,9 +137,7 @@
 					</carousel>
 				</div>
 					</div>
-					</div>
 			</div>
-		</div>
 		</div>
 		</div>
 		<div id="pdcWrapper" class="top-margin">
@@ -223,7 +217,7 @@
 					<div class="rightMother">
 						<div class="rightChild">
 							<h3>藤井 隆英<span>(ふじい りゅうえい)</span></h3>
-							<p> 
+							<p>
 								禅の身体育てとなる運動療法、動的瞑想指導の第一人者。仏教身体研究家。<br>
 								zafu代表。身心堂 主宰 主任講師。「zafuざふ」「安楽坐禅法」開発者。<br>
 								禅の身体・哲学・社会活動・マインドフルネスに通じる僧。<br>
