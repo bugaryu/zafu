@@ -5,7 +5,7 @@ div, header, footer, li, ul, img button{
 	/*border: 1px solid blue;*/
 }
 * {
-
+	
 	font-family: "itc-avant-garde-gothic-pro"
 }
 
@@ -92,12 +92,12 @@ h4 {
 .header-core {
 	margin-top: -80px;
 	max-width: 1500px;
-	min-width: 880px;
+	min-width: 950px;
 }
 
 #header {
 	width: 100%;
-min-width: 880px;
+min-width: 900px;
 	height: 80px;
 	background-color: lightgray;
 	display: flex;
@@ -111,7 +111,7 @@ min-width: 880px;
 }
 
 
-#header img {
+#header img { 
 	width: 90px;
 	margin-left: 20px;
 	margin-top: 5px;
@@ -146,13 +146,13 @@ min-width: 880px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
+	
 }
 
 #top {
 	width: 100%;
 	height: 650px;
-
+	
 }
 
 .slide-image {
@@ -231,7 +231,7 @@ min-width: 880px;
 #about {
 	width: 100%;
 	height: 400px;
-	margin-top: 80px;
+	margin-top: 80px; 
 }
 
 
@@ -271,8 +271,8 @@ min-width: 880px;
 }
 
 #program .title-section {
-	padding-top: 15px;
-	margin-top: -30px;
+	padding-top: 15px; 
+	margin-top: -30px;	
 	margin-bottom: 0px;
 	color: white;
 }
@@ -363,9 +363,8 @@ img.navigation-btn {
 }
 
 .topic-item {
-	width: 270px;
+	width: 24vw;
 	height: 300px;
-	/*height: 60vw;*/
 	text-align: left;
 	position: relative;
 	margin: 0;
@@ -450,7 +449,7 @@ img.navigation-btn {
 }
 
 .prModifer {
-  margin-top: 120px;
+  margin-top: 120px; 
 }
 
 .prWrapper a {
@@ -528,7 +527,7 @@ img.navigation-btn {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
+		
 }
 
 
@@ -561,9 +560,11 @@ img.navigation-btn {
 
 
 .profile-manager {
-	margin-top: 50px;
+min-width: 940px;
+	margin-top: 50px; 
 	display: flex;
 	justify-content: center;
+font-size: 12px;
 }
 
 .leftMother {
@@ -579,7 +580,7 @@ img.navigation-btn {
 }
 
 .leftChild {
-	margin-right: 15px;
+	margin-right: 15px; 
 }
 
 
@@ -592,16 +593,18 @@ img.navigation-btn {
 	margin-left: 15px;
 }
 
-#profile-content h3 {
+.rightChild h3 {
 	margin-bottom: 10px;
 	margin-top: -5px;
 }
-#profile-content span {
+
+.rightChild span {
 	font-size: 12px;
 	font-weight: 100;
 	margin-left: 10px;
 }
-#profile-content p {
+
+.rightChild p {
 	padding-top: 10px;
 	margin-right: 30px;
 	font-size: 12px;
@@ -613,6 +616,7 @@ img.navigation-btn {
 /* footer */
 #footer {
 	position: relative;
+min-width: 900px;
 	width: 100%;
 	height: 80px;
 	background-color: lightgray;
