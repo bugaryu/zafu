@@ -39,22 +39,22 @@ a:hover {
 }
 
 .container {
+	width: 100%;
 	padding-top: 30px;
 	padding-bottom: 30px;
 }
 
 .all {
 	width: 100%;
-	max-width: 1500px;
-	margin: 0 auto;
-	display: flex;
-	justify-content: center;
+	margin: 0;
 }
 
 .main {
 	width: 100%;
 	position: relative;
-	margin-top: 80px;
+	margin: 80px auto 0;
+	max-width: 1500px;
+	min-width: 900px;
 }
 /* title */
 h3 {
@@ -88,26 +88,31 @@ h4 {
 /* <-- 共通のcss */
 
 /* header */
-
-.header-core {
-	margin-top: -80px;
-	max-width: 1500px;
-	min-width: 950px;
+.h-core {
+	width: 100%;
+	display: flex;
+	justify-content: center;
 }
 
+
 #header {
+	position: fixed;
 	width: 100%;
-min-width: 900px;
 	height: 80px;
-	background-color: lightgray;
+	background-color: white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: fixed;
-	background-color: white;
 	z-index: 30;
-	-webkit-box-shadow: 0px 0px 1vw #808080;
-	box-shadow: 0px 0px 1vw #808080;
+	-webkit-box-shadow: 0px 0px 10px #808080;
+	box-shadow: 0px 0px 10px #808080;
+}
+
+.header-manager {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 
@@ -129,15 +134,10 @@ min-width: 900px;
 	padding-left: 20px;
 }
 
-.header-manager {
-	width: 1500px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
 .headerMenu {
+	text-align: right;
 	margin-right: 10px;
+		min-width: 900px;
 }
 /* <-- header */
 
@@ -160,7 +160,6 @@ min-width: 900px;
 	height: 650px;
 	text-align: center;
 	margin: 0 auto;
-	margin-top: 80px;
 }
 
 .slide-image a {
@@ -223,6 +222,19 @@ min-width: 900px;
 
 .page-active {
 	background-color: #C65248;
+}
+
+
+.autority {
+	width: 100%;
+	position: absolute;
+	font-size: 9px;
+	text-align: right;
+	margin-top: -25px;
+}
+
+.autority p {
+	margin-right: 20px;
 }
 
 /* <-- top */
@@ -308,26 +320,42 @@ min-width: 900px;
 	align-items: center;
 	justify-content: center;
 	margin-bottom: -70px;
-	width: 100%;
-	max-width: 1400px;
+	width: 90%;
+	max-width: 1500px;
+	margin:0 auto;
 }
 
 #topics {
 	display: flex;
 	justify-content: center;
+	width: 100%;
+}
+
+.topics-core-mother {
+	display: flex;
+	justify-content: center;
 }
 
 .topics-core {
+	width: 95%;
+	display: flex;
+	justify-content: center;
+}
+
+#topics .top-margin {
 	display: flex;
 	justify-content: center;
 }
 
 
+
 #topics-view {
-	width: 82%;
+	width: 950px;
 	height: 450px;
 	padding-top: 30px;
 }
+
+
 
 .morebtn {
 	width: 95%;
@@ -350,10 +378,9 @@ min-width: 900px;
     opacity: 0.5;
 }
 
-　/* ナビゲーションボタン */
-
-img.navigation-btn {
-	/*object-fit: contain;*/
+.VueCarousel-navigation-button .VueCarousel-navigation-prev .VueCarousel-navigation--disabled {
+	margin-right: 0;
+	padding: 0;
 }
 
 .slideManager {
@@ -363,12 +390,12 @@ img.navigation-btn {
 }
 
 .topic-item {
-	width: 24vw;
+	width: 270px;
 	height: 300px;
 	text-align: left;
 	position: relative;
-	margin: 0;
 }
+
 .topic-item a {
 	position: absolute;
 	width: 100%;
@@ -391,6 +418,7 @@ img.navigation-btn {
 .topic-info {
 	position: absolute;
 	bottom: 0;
+	width: 100%;
 	height: 150px;
 }
 .topic-date, .topic-category {
@@ -614,11 +642,17 @@ font-size: 12px;
 /* <-- profile */
 
 /* footer */
+.f-core {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
 #footer {
-	position: relative;
-min-width: 900px;
 	width: 100%;
 	height: 80px;
+	max-width: 10000px;
+	min-width: 900px;
 	background-color: lightgray;
 	display: flex;
 	align-items: center;
@@ -626,7 +660,7 @@ min-width: 900px;
 }
 
 .footer-manager {
-	width: 1500px;
+	width: 100%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
