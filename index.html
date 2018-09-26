@@ -46,21 +46,21 @@
 					 v-if="currentPage == page"
 					 :key="page">
 					<a href="" v-scroll-to="links[page]"><img :src="url"></a>
+					<div class="autority" v-if="currentPage == 0">
+						<p>撮影協力：国指定重要文化財「一条恵観山荘」</p>
+					</div>
 				</div>
 			</transition>
 			<div class="btn-manager">
-			<div id="pagenate-btn">
-				<button class="slide-btn"
-						:class="{ 'page-active': currentPage == page }"
-						v-for="(url, page) in images"
-						:value="page"
-						@click="change">
-				</button>
-				<div class="autority">
-					<p>撮影協力：国指定重要文化財「一条恵観山荘」</p>
+				<div id="pagenate-btn">
+					<button class="slide-btn"
+							:class="{ 'page-active': currentPage == page }"
+							v-for="(url, page) in images"
+							:value="page"
+							@click="change">
+					</button>
 				</div>
 			</div>
-		</div>
 		</div>
 		</div>
 		<div class="about-manager">
